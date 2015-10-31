@@ -16,8 +16,10 @@ from patchio import patch_args
 
 class TestPatchArgs(unittest.TestCase):
 
+    """Tests for patch_args utility."""
+
     def setUp(self):
-        self.args = ["some_arg", "another_arg"]
+        self.new_args = ["some_arg", "another_arg"]
 
     def test_args_change_and_change_back(self):
         """Using patch_args context manager temporarily changes sys.argv."""
@@ -32,7 +34,7 @@ class TestPatchArgs(unittest.TestCase):
     def test_decorator(self):
         """Using patch_args decorator temporarily changes sys.argv."""
         @patch_args(self.new_args)
-        def my_func(yay):
+        def my_func():
             my_func.call_count += 1
             assert sys.argv is self.new_args
             assert sys.argv is not original_args
