@@ -11,7 +11,7 @@ env:
   - TOXENV=pypy
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox
+install: pip install -U tox codecov
 
 # command to run tests, e.g. python setup.py test
 script: tox
@@ -28,3 +28,5 @@ deploy:
     tags: true
     repo: treyhunner/patchio
     condition: $TOXENV == py27
+
+after_success: codecov
