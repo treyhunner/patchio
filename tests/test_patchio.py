@@ -56,6 +56,15 @@ class TestPatchArgs(unittest.TestCase):
         assert sys.argv != self.new_args
         assert sys.argv is self.original_args
 
+    def test_nestable(self):
+        args1, args2 = ["first"], ["second"]
+        with patch_args(args1) as args:
+            assert args is sys.argv is args1
+            with patch_args(args2) as args:
+                assert args is sys.argv is args2
+            assert sys.argv is not self.original_args
+        assert sys.argv is self.original_args
+
 
 if __name__ == '__main__':
     sys.exit(unittest.main())
