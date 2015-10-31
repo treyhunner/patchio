@@ -2,14 +2,14 @@
 PatchIO
 =======
 
-.. image:: https://badge.fury.io/py/patchio.png
-    :target: http://badge.fury.io/py/patchio
+.. image:: https://img.shields.io/pypi/v/patchio.svg
+        :target: https://pypi.python.org/pypi/patchio
 
 .. image:: https://travis-ci.org/treyhunner/patchio.png?branch=master
         :target: https://travis-ci.org/treyhunner/patchio
 
-.. image:: https://img.shields.io/pypi/v/patchio.svg
-        :target: https://pypi.python.org/pypi/patchio
+.. image:: https://codecov.io/github/treyhunner/patchio/coverage.svg?branch=master
+    :target: https://codecov.io/github/treyhunner/patchio?branch=master
 
 
 Python monkey-patching utilities
