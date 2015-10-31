@@ -1,6 +1,6 @@
-===============================
+=======
 PatchIO
-===============================
+=======
 
 .. image:: https://badge.fury.io/py/patchio.png
     :target: http://badge.fury.io/py/patchio
@@ -8,7 +8,7 @@ PatchIO
 .. image:: https://travis-ci.org/treyhunner/patchio.png?branch=master
         :target: https://travis-ci.org/treyhunner/patchio
 
-.. image:: https://pypip.in/d/patchio/badge.png
+.. image:: https://img.shields.io/pypi/v/patchio.svg
         :target: https://pypi.python.org/pypi/patchio
 
 
