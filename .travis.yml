@@ -5,10 +5,7 @@ language: python
 
 env:
   - TOXENV=py34
-  - TOXENV=py33
-  - TOXENV=py27
-  - TOXENV=py26
-  - TOXENV=pypy
+  - TOXENV=py35
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -U tox codecov
@@ -27,6 +24,6 @@ deploy:
   on:
     tags: true
     repo: treyhunner/patchio
-    condition: $TOXENV == py27
+    condition: $TOXENV == py35
 
 after_success: codecov
