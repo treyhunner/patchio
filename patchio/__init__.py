@@ -22,13 +22,14 @@ class patch_args(ContextDecorator):
     def __init__(self, args):
         """Save fake arguments and real arguments."""
         self.args = args
-        self.real_args = sys.argv
+        self._old_values = []
 
     def __enter__(self):
         """Monkey patch ``sys.argv`` to use fake arguments."""
+        self._old_values.append(sys.argv)
         sys.argv = self.args
         return sys.argv
 
     def __exit__(self, exc_type, exc_value, traceback):
         """Restore ``sys.argv`` to real argument values."""
-        sys.argv = self.real_args
+        sys.argv = self._old_values.pop()
