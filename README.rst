@@ -1,6 +1,6 @@
-===============================
+=======
 PatchIO
-===============================
+=======
 
 .. image:: https://badge.fury.io/py/patchio.png
     :target: http://badge.fury.io/py/patchio
